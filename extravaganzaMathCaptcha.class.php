@@ -8,24 +8,12 @@ Class ExtravaganzaMathCaptcha {
     public static $maxNumberA = 99;
     public static $minNumberB = 1;
     public static $maxNumberB = 99;
-    private static $_instance;
-
-    /*
-	* Create new instance
-	* @return self instance
-	*/
-    public static function call() {
-        if (null === self::$_instance) {
-            self::$_instance = new self();
-        }
-        return self::$_instance;
-    }
 
     /*
     * Generate captcha
     * @return array $A, $B, $action (first number, second number, action
     */
-    public function generateCaptcha() {
+    public static function generateCaptcha() {
         $A = rand(self::$minNumberA, self::$maxNumberA);
         $B = rand(self::$minNumberB, self::$maxNumberB);
 
@@ -56,7 +44,7 @@ Class ExtravaganzaMathCaptcha {
     * Returns is captcha correct
     * @return boolean
     */
-    public function checkCaptcha($result) {
+    public static function checkCaptcha($result) {
         return (int)$_SESSION['captcha'] === (int)$result;
     }
 
