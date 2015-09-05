@@ -9,9 +9,9 @@ Class ExtravaganzaMathCaptcha {
     public static $minNumberB = 1;
     public static $maxNumberB = 99;
 
-    /*
+    /* 
     * Generate captcha
-    * @return array $A, $B, $action (first number, second number, action
+    * @return array $A, $B, $action (first number, second number, action)
     */
     public static function generateCaptcha() {
         $A = rand(self::$minNumberA, self::$maxNumberA);
