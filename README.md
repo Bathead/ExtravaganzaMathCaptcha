@@ -1,5 +1,5 @@
 # Extravaganza Math Captcha
-=======
+
 How it works
 ---------------
 Extravaganza Math Captcha is a small, fast and secure Captcha Class for small sites. E.g. 11 + 36 = ?
